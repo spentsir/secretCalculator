@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF62843420C9B72D0073928A /* SecretNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */; };
+		BF62843620C9DF890073928A /* SecretFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843520C9DF890073928A /* SecretFolderViewController.swift */; };
+		BF62843820C9F88A0073928A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843720C9F88A0073928A /* SettingsTableViewController.swift */; };
+		BF62843A20C9F8920073928A /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843920C9F8920073928A /* NotesTableViewController.swift */; };
+		BF62843C20C9F8D00073928A /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */; };
+		BF62843E20C9F8DB0073928A /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843D20C9F8DB0073928A /* NotesManager.swift */; };
+		BF62844120C9F95F0073928A /* BasicCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */; };
 		BFD15C3820C99EDD006EBB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */; };
-		BFD15C3A20C99EDD006EBB46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD15C3920C99EDD006EBB46 /* ViewController.swift */; };
+		BFD15C3A20C99EDD006EBB46 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */; };
 		BFD15C3D20C99EDD006EBB46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD15C3B20C99EDD006EBB46 /* Main.storyboard */; };
 		BFD15C3F20C99EE0006EBB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD15C3E20C99EE0006EBB46 /* Assets.xcassets */; };
 		BFD15C4220C99EE0006EBB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD15C4020C99EE0006EBB46 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF62843320C9B72D0073928A /* SecretNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecretNotes.xcdatamodel; sourceTree = "<group>"; };
+		BF62843520C9DF890073928A /* SecretFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretFolderViewController.swift; sourceTree = "<group>"; };
+		BF62843720C9F88A0073928A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BF62843920C9F8920073928A /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
+		BF62843D20C9F8DB0073928A /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorViewController.swift; sourceTree = "<group>"; };
 		BFD15C3420C99EDD006EBB46 /* secretCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secretCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD15C3920C99EDD006EBB46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		BFD15C3C20C99EDD006EBB46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD15C3E20C99EE0006EBB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD15C4120C99EE0006EBB46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF62843F20C9F8E20073928A /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */,
+				BF62843D20C9F8DB0073928A /* NotesManager.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		BFD15C2B20C99EDD006EBB46 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +77,36 @@
 		BFD15C3620C99EDD006EBB46 /* secretCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */,
-				BFD15C3920C99EDD006EBB46 /* ViewController.swift */,
-				BFD15C3B20C99EDD006EBB46 /* Main.storyboard */,
-				BFD15C3E20C99EE0006EBB46 /* Assets.xcassets */,
-				BFD15C4020C99EE0006EBB46 /* LaunchScreen.storyboard */,
-				BFD15C4320C99EE0006EBB46 /* Info.plist */,
+				BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */,
+				BF62843520C9DF890073928A /* SecretFolderViewController.swift */,
+				BF62843720C9F88A0073928A /* SettingsTableViewController.swift */,
+				BF62843920C9F8920073928A /* NotesTableViewController.swift */,
+				BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */,
+				BF62843F20C9F8E20073928A /* Notes */,
+				BFD15C4A20C99F50006EBB46 /* Storyboard */,
+				BFD15C4920C99F42006EBB46 /* Resources */,
 			);
 			path = secretCalculator;
+			sourceTree = "<group>";
+		};
+		BFD15C4920C99F42006EBB46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */,
+				BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */,
+				BFD15C3E20C99EE0006EBB46 /* Assets.xcassets */,
+				BFD15C4320C99EE0006EBB46 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFD15C4A20C99F50006EBB46 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BFD15C3B20C99EDD006EBB46 /* Main.storyboard */,
+				BFD15C4020C99EE0006EBB46 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD15C3A20C99EDD006EBB46 /* ViewController.swift in Sources */,
+				BF62843C20C9F8D00073928A /* NotesDetailViewController.swift in Sources */,
+				BF62843E20C9F8DB0073928A /* NotesManager.swift in Sources */,
+				BF62843620C9DF890073928A /* SecretFolderViewController.swift in Sources */,
+				BF62843820C9F88A0073928A /* SettingsTableViewController.swift in Sources */,
+				BFD15C3A20C99EDD006EBB46 /* SetPasswordViewController.swift in Sources */,
+				BF62843420C9B72D0073928A /* SecretNotes.xcdatamodeld in Sources */,
 				BFD15C3820C99EDD006EBB46 /* AppDelegate.swift in Sources */,
+				BF62843A20C9F8920073928A /* NotesTableViewController.swift in Sources */,
+				BF62844120C9F95F0073928A /* BasicCalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G2V54975X;
-				INFOPLIST_FILE = secretCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/secretCalculator/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G2V54975X;
-				INFOPLIST_FILE = secretCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/secretCalculator/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF62843320C9B72D0073928A /* SecretNotes.xcdatamodel */,
+			);
+			currentVersion = BF62843320C9B72D0073928A /* SecretNotes.xcdatamodel */;
+			path = SecretNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFD15C2C20C99EDD006EBB46 /* Project object */;
 }
