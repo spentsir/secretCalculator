@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +13,7 @@
         <!--Set Password View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SetPasswordViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PasscodeSetter" storyboardIdentifier="PasscodeSetter" id="BYZ-38-t0r" customClass="SetPasswordViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +341,7 @@
         <!--Secret Folder-->
         <scene sceneID="CD6-Ff-TZo">
             <objects>
-                <viewController id="XRA-gq-XXu" customClass="SecretFolderViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SecretFolder" storyboardIdentifier="SecretFolder" id="XRA-gq-XXu" customClass="SecretFolderViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yha-Mf-zPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,6 +349,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-a1-mDR">
                                 <rect key="frame" x="20" y="84" width="60" height="60"/>
                                 <state key="normal" image="lock"/>
+                                <connections>
+                                    <action selector="lockApp:" destination="XRA-gq-XXu" eventType="touchUpInside" id="281-VG-FPT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-rW-qtI">
                                 <rect key="frame" x="334" y="84" width="60" height="60"/>
@@ -393,55 +395,50 @@
         <!--Settings Table View Controller-->
         <scene sceneID="ZK5-7H-6JW">
             <objects>
-                <tableViewController id="nyZ-2Z-HFk" customClass="SettingsTableViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="SettingsPage" storyboardIdentifier="SettingsPage" id="nyZ-2Z-HFk" customClass="SettingsTableViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TmS-ms-LcK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="HiV-7p-jdv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="xA1-Ak-AeM" detailTextLabel="i8V-oP-lSX" rowHeight="55" style="IBUITableViewCellStyleValue1" id="HiV-7p-jdv">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HiV-7p-jdv" id="8c3-gv-Ebl">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="54.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-TZ-lMB">
-                                            <rect key="frame" x="20" y="12" width="79" height="32"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xA1-Ak-AeM">
+                                            <rect key="frame" x="20.000000000000004" y="18" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAg-vf-GHP">
-                                            <rect key="frame" x="122" y="12" width="187" height="32"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i8V-oP-lSX">
+                                            <rect key="frame" x="350" y="18" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="lAg-vf-GHP" secondAttribute="trailing" constant="85" id="5LV-UY-Ge3"/>
-                                        <constraint firstItem="6dD-TZ-lMB" firstAttribute="top" secondItem="8c3-gv-Ebl" secondAttribute="topMargin" constant="1" id="BLA-6z-SzD"/>
-                                        <constraint firstItem="lAg-vf-GHP" firstAttribute="top" secondItem="8c3-gv-Ebl" secondAttribute="topMargin" constant="1" id="FSu-eT-3qn"/>
-                                        <constraint firstItem="lAg-vf-GHP" firstAttribute="leading" secondItem="6dD-TZ-lMB" secondAttribute="trailing" constant="23" id="Xlf-4B-hLl"/>
-                                        <constraint firstItem="lAg-vf-GHP" firstAttribute="bottom" secondItem="8c3-gv-Ebl" secondAttribute="bottomMargin" id="ZMy-rl-e3U"/>
-                                        <constraint firstItem="6dD-TZ-lMB" firstAttribute="leading" secondItem="8c3-gv-Ebl" secondAttribute="leadingMargin" id="bRy-ZC-e9U"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="6dD-TZ-lMB" secondAttribute="trailing" constant="295" id="h8R-J9-K1s"/>
-                                        <constraint firstItem="6dD-TZ-lMB" firstAttribute="bottom" secondItem="8c3-gv-Ebl" secondAttribute="bottomMargin" id="lNA-kW-jDN"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ebm-iY-cek">
-                                <rect key="frame" x="0.0" y="83" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell2" rowHeight="55" id="80u-42-QHa">
+                                <rect key="frame" x="0.0" y="83" width="414" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ebm-iY-cek" id="iOQ-hp-yRD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80u-42-QHa" id="ElQ-jN-UC0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-kd-27Y">
-                                            <rect key="frame" x="20" y="6" width="123" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlP-aD-zdd">
+                                            <rect key="frame" x="20" y="12" width="123" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Change Password"/>
+                                            <connections>
+                                                <action selector="changePasswordButton:" destination="nyZ-2Z-HFk" eventType="touchUpInside" id="sVo-XA-tkU"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -491,6 +488,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8uo-wm-Ohe"/>
                     </view>
+                    <connections>
+                        <outlet property="contentTextField" destination="jce-hd-Pb1" id="Z06-iT-Phv"/>
+                        <outlet property="titleTextField" destination="z0m-nx-4dY" id="mXJ-QP-4uY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tw6-NC-6Ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -546,7 +547,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qdK-YQ-mUQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ngL-UT-jFq" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="MainNav" storyboardIdentifier="MainNav" automaticallyAdjustsScrollViewInsets="NO" id="ngL-UT-jFq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6Kz-Uq-GHl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7eJ-Q8-x8s">
@@ -565,7 +566,7 @@
         <!--Basic Calculator View Controller-->
         <scene sceneID="bN9-bL-nK1">
             <objects>
-                <viewController id="qlh-bf-moD" customClass="BasicCalculatorViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Calculator" storyboardIdentifier="Calculator" id="qlh-bf-moD" customClass="BasicCalculatorViewController" customModule="secretCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lil-PJ-PYO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -577,6 +578,9 @@
                                 <state key="normal" title="÷">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="divideButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="SGM-1R-zCp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-uv-jef">
                                 <rect key="frame" x="311" y="318" width="103" height="103"/>
@@ -585,6 +589,9 @@
                                 <state key="normal" title="x">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="multiplyButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="IOa-W4-do2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpm-Oy-FRb">
                                 <rect key="frame" x="311" y="422" width="103" height="103"/>
@@ -593,6 +600,9 @@
                                 <state key="normal" title="–">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="minusButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="w3E-uD-Gat"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-dP-obf">
                                 <rect key="frame" x="311" y="526" width="103" height="103"/>
@@ -601,6 +611,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="plusButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="2za-LB-9GV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7Z-oN-aJ3">
                                 <rect key="frame" x="311" y="630" width="103" height="105"/>
@@ -609,6 +622,9 @@
                                 <state key="normal" title="=">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="equalButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="GoI-mq-cTX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-gd-QU8">
                                 <rect key="frame" x="207" y="630" width="103" height="105"/>
@@ -617,6 +633,9 @@
                                 <state key="normal" title=".">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="dotButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="YJc-V7-e97"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1u-3f-Yjt">
                                 <rect key="frame" x="207" y="526" width="103" height="103"/>
@@ -625,6 +644,9 @@
                                 <state key="normal" title="3">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="threeButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="bwz-0W-EKw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dty-Fk-K3Y">
                                 <rect key="frame" x="207" y="422" width="103" height="103"/>
@@ -633,6 +655,9 @@
                                 <state key="normal" title="6">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sixButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="4u3-cT-IuU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-tG-1Ll">
                                 <rect key="frame" x="207" y="318" width="103" height="103"/>
@@ -641,6 +666,9 @@
                                 <state key="normal" title="9">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nineButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="dDN-Xw-iPo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqn-LO-Jhw">
                                 <rect key="frame" x="207" y="214" width="103" height="103"/>
@@ -649,6 +677,9 @@
                                 <state key="normal" title="%">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="percentButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="hrh-Lk-gnT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpL-te-IyO">
                                 <rect key="frame" x="103" y="214" width="103" height="103"/>
@@ -657,6 +688,9 @@
                                 <state key="normal" title="+/-">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signsButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="dQO-QS-92s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-z1-8GT">
                                 <rect key="frame" x="103" y="318" width="103" height="103"/>
@@ -665,6 +699,9 @@
                                 <state key="normal" title="8">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="eightButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="7Av-gn-bBV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evC-6L-tWG">
                                 <rect key="frame" x="103" y="422" width="103" height="103"/>
@@ -673,6 +710,9 @@
                                 <state key="normal" title="5">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="fiveButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="L93-qW-DyQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tV-Ua-s8V">
                                 <rect key="frame" x="103" y="526" width="103" height="103"/>
@@ -681,6 +721,9 @@
                                 <state key="normal" title="2">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="twoButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="apr-Q5-IMk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-JZ-uT1">
                                 <rect key="frame" x="-1" y="526" width="103" height="103"/>
@@ -689,6 +732,9 @@
                                 <state key="normal" title="1">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="oneButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="Eee-lV-pdj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de2-HG-X64">
                                 <rect key="frame" x="-1" y="422" width="103" height="103"/>
@@ -697,6 +743,9 @@
                                 <state key="normal" title="4">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="fourButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="S1A-xI-WRi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FX-fU-nCo">
                                 <rect key="frame" x="-1" y="318" width="103" height="103"/>
@@ -705,6 +754,9 @@
                                 <state key="normal" title="7">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sevenButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="3bO-t3-aT3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-zL-FbL">
                                 <rect key="frame" x="-1" y="214" width="103" height="103"/>
@@ -713,6 +765,9 @@
                                 <state key="normal" title="C">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="sXb-7o-A3D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-pR-UeB">
                                 <rect key="frame" x="0.0" y="630" width="206" height="105"/>
@@ -721,6 +776,9 @@
                                 <state key="normal" title="0">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="zeroButton:" destination="qlh-bf-moD" eventType="touchUpInside" id="WIq-sO-bbE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oey-11-xe3">
                                 <rect key="frame" x="44" y="106" width="350" height="100"/>
@@ -824,10 +882,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="82O-MU-TcL"/>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="oey-11-xe3" id="Ac9-Xj-unG"/>
+                        <outlet property="signLabel" destination="8ut-gj-O0s" id="OVQ-sF-PQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9i5-v9-Zck" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="-23"/>
+            <point key="canvasLocation" x="-30" y="-155"/>
         </scene>
     </scenes>
     <resources>

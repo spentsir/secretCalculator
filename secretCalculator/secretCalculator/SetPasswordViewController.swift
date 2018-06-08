@@ -252,6 +252,7 @@ class SetPasswordViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: setPasscode))
             self.present(alertController, animated: true, completion: nil)
+            updatePasscode()
         } else {
             let alertMessage = "Passcodes must have at least one value"
             let alertController = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
@@ -268,8 +269,16 @@ class SetPasswordViewController: UIViewController {
     
     func popToMain(){
         let storyBoard = UIStoryboard(name:"Main", bundle:nil)
-        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "mainNav") as! UINavigationController
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MainNav") as! UINavigationController
         self.present(resultViewController, animated:true, completion:nil)
+    }
+    
+    func updatePasscode() {
+        if(savedData.object(forKey: "Passcode") == nil){
+            
+        } else {
+            popToMain()
+        }
     }
     
     // getValue
