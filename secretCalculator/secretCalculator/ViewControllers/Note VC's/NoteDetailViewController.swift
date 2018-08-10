@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NotesDetailViewController: UIViewController {
+class NoteDetailViewController: UIViewController {
     
     var note: Note?
 

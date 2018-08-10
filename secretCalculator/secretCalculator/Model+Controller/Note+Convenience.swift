@@ -6,4 +6,12 @@
 //  Copyright © 2018 Spencer Cawley. All rights reserved.
 //
 
-import Foundation
+import CoreData
+
+extension Note {
+    convenience init(title: String, text: String, context: NSManagedObjectContext = CoreDataStack.context) {
+        self.init(context: context)
+        self.title = title
+        self.text = text
+    }
+}

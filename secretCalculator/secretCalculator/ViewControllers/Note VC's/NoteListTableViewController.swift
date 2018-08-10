@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class NotesListTableViewController: UITableViewController {
+class NoteListTableViewController: UITableViewController {
     let fetchedResultsController: NSFetchedResultsController<Note> = {
         let request: NSFetchRequest<Note> = Note.fetchRequest()
         let titleSort = NSSortDescriptor(key: "title", ascending: false)

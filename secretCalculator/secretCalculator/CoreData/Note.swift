@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import CoreData
+
+class CoreDataStack {
+    
+    static let container: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "SecretNotes")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+                fatalError("Error loading from CoreData: \(error)")
+            }
+        })
+        return container
+    }()
+    
+    static var context: NSManagedObjectContext {
+        return container.viewContext
+    }
+    
+    
+}

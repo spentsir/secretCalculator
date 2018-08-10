@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		BF62843420C9B72D0073928A /* SecretNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */; };
 		BF62843620C9DF890073928A /* SecretFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843520C9DF890073928A /* SecretFolderViewController.swift */; };
-		BF62843A20C9F8920073928A /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843920C9F8920073928A /* NotesTableViewController.swift */; };
-		BF62843C20C9F8D00073928A /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */; };
-		BF62843E20C9F8DB0073928A /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843D20C9F8DB0073928A /* NotesManager.swift */; };
+		BF62843C20C9F8D00073928A /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843B20C9F8D00073928A /* NoteDetailViewController.swift */; };
+		BF62843E20C9F8DB0073928A /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62843D20C9F8DB0073928A /* NoteListTableViewController.swift */; };
 		BF62844120C9F95F0073928A /* BasicCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */; };
 		BF62844320CB01E90073928A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62844220CB01E90073928A /* SettingsTableViewController.swift */; };
+		BF71F083211D23E900264D8D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71F082211D23E900264D8D /* Note.swift */; };
+		BF71F086211D242200264D8D /* Note+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71F085211D242200264D8D /* Note+Convenience.swift */; };
+		BF71F088211D242B00264D8D /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71F087211D242B00264D8D /* NoteController.swift */; };
 		BFD15C3820C99EDD006EBB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */; };
 		BFD15C3A20C99EDD006EBB46 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */; };
 		BFD15C3D20C99EDD006EBB46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD15C3B20C99EDD006EBB46 /* Main.storyboard */; };
@@ -24,11 +26,13 @@
 /* Begin PBXFileReference section */
 		BF62843320C9B72D0073928A /* SecretNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecretNotes.xcdatamodel; sourceTree = "<group>"; };
 		BF62843520C9DF890073928A /* SecretFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretFolderViewController.swift; sourceTree = "<group>"; };
-		BF62843920C9F8920073928A /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
-		BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
-		BF62843D20C9F8DB0073928A /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		BF62843B20C9F8D00073928A /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		BF62843D20C9F8DB0073928A /* NoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewController.swift; sourceTree = "<group>"; };
 		BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculatorViewController.swift; sourceTree = "<group>"; };
 		BF62844220CB01E90073928A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BF71F082211D23E900264D8D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		BF71F085211D242200264D8D /* Note+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Convenience.swift"; sourceTree = "<group>"; };
+		BF71F087211D242B00264D8D /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		BFD15C3420C99EDD006EBB46 /* secretCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secretCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -49,13 +53,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF62843F20C9F8E20073928A /* Notes */ = {
+		BF62843F20C9F8E20073928A /* Note VC's */ = {
 			isa = PBXGroup;
 			children = (
-				BF62843B20C9F8D00073928A /* NotesDetailViewController.swift */,
-				BF62843D20C9F8DB0073928A /* NotesManager.swift */,
+				BF62843B20C9F8D00073928A /* NoteDetailViewController.swift */,
+				BF62843D20C9F8DB0073928A /* NoteListTableViewController.swift */,
 			);
-			path = Notes;
+			path = "Note VC's";
+			sourceTree = "<group>";
+		};
+		BF71F080211D237000264D8D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */,
+				BF62844220CB01E90073928A /* SettingsTableViewController.swift */,
+				BF62843520C9DF890073928A /* SecretFolderViewController.swift */,
+				BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */,
+				BF62843F20C9F8E20073928A /* Note VC's */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF71F081211D23D900264D8D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */,
+				BF71F082211D23E900264D8D /* Note.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BF71F084211D241200264D8D /* Model+Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF71F085211D242200264D8D /* Note+Convenience.swift */,
+				BF71F087211D242B00264D8D /* NoteController.swift */,
+			);
+			path = "Model+Controller";
 			sourceTree = "<group>";
 		};
 		BFD15C2B20C99EDD006EBB46 = {
@@ -77,12 +111,9 @@
 		BFD15C3620C99EDD006EBB46 /* secretCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				BFD15C3920C99EDD006EBB46 /* SetPasswordViewController.swift */,
-				BF62843520C9DF890073928A /* SecretFolderViewController.swift */,
-				BF62844220CB01E90073928A /* SettingsTableViewController.swift */,
-				BF62843920C9F8920073928A /* NotesTableViewController.swift */,
-				BF62844020C9F95F0073928A /* BasicCalculatorViewController.swift */,
-				BF62843F20C9F8E20073928A /* Notes */,
+				BF71F084211D241200264D8D /* Model+Controller */,
+				BF71F081211D23D900264D8D /* CoreData */,
+				BF71F080211D237000264D8D /* ViewControllers */,
 				BFD15C4A20C99F50006EBB46 /* Storyboard */,
 				BFD15C4920C99F42006EBB46 /* Resources */,
 			);
@@ -93,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				BFD15C3720C99EDD006EBB46 /* AppDelegate.swift */,
-				BF62843220C9B72D0073928A /* SecretNotes.xcdatamodeld */,
 				BFD15C3E20C99EE0006EBB46 /* Assets.xcassets */,
 				BFD15C4320C99EE0006EBB46 /* Info.plist */,
 			);
@@ -180,13 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF62843C20C9F8D00073928A /* NotesDetailViewController.swift in Sources */,
-				BF62843E20C9F8DB0073928A /* NotesManager.swift in Sources */,
+				BF62843C20C9F8D00073928A /* NoteDetailViewController.swift in Sources */,
+				BF71F086211D242200264D8D /* Note+Convenience.swift in Sources */,
+				BF62843E20C9F8DB0073928A /* NoteListTableViewController.swift in Sources */,
 				BF62843620C9DF890073928A /* SecretFolderViewController.swift in Sources */,
 				BFD15C3A20C99EDD006EBB46 /* SetPasswordViewController.swift in Sources */,
 				BF62843420C9B72D0073928A /* SecretNotes.xcdatamodeld in Sources */,
+				BF71F088211D242B00264D8D /* NoteController.swift in Sources */,
+				BF71F083211D23E900264D8D /* Note.swift in Sources */,
 				BFD15C3820C99EDD006EBB46 /* AppDelegate.swift in Sources */,
-				BF62843A20C9F8920073928A /* NotesTableViewController.swift in Sources */,
 				BF62844120C9F95F0073928A /* BasicCalculatorViewController.swift in Sources */,
 				BF62844320CB01E90073928A /* SettingsTableViewController.swift in Sources */,
 			);
